@@ -1,9 +1,7 @@
-# Dependencies
-.psci_modules
-.spago
-bower_components
-node_modules
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
 
-# Generated files
-.psci
-output
