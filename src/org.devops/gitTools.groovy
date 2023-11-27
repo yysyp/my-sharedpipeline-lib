@@ -2,6 +2,7 @@ package org.devops
 import groovy.json.JsonOutput
 
 def checkout(gitUrl, gitCredentialId, branchName, nexusUrl, nexusCredentialId) {
+    println 'checkout...'
     def gitUrlName = gitUrl.split("https://")[1]
     def repoName = gitUrl.split("/")[-1].split("\\.")[0]
     def workDir = "${env.WORKSPACE}/${repoName}"
@@ -13,7 +14,7 @@ def checkout(gitUrl, gitCredentialId, branchName, nexusUrl, nexusCredentialId) {
     """
 
     //withCredentials()
-    
+
 
     def gitInfo = [:]
     gitInfo.put("workDir", workDir)
